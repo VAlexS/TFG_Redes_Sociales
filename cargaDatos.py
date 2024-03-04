@@ -26,6 +26,8 @@ print("PARTE DEL FICHERO")
 
 print(df_cleanded.head(n=10))
 
-#ya que tenemos el dataframe sin valores faltantes, hacer el EDA
+#ya que tenemos el dataframe sin valores faltantes, genero un nuevo .csv con ese dataframe
+
+df_cleanded.to_csv('files\TwitterDatashetClean.csv', index=False)
 
 
