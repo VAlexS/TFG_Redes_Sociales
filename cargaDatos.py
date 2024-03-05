@@ -30,7 +30,20 @@ else:
     print("Cantidad de valores en la columna <<Likes>> distinta de 0: ",num_valores_no_cero)
     
 
+#calculo el porcentaje de valores faltantes
+num_valores_totales = df.size
 
+# Calcular el número total de valores no nulos en el DataFrame
+num_valores_no_nulos = df.count().sum()
+
+# Calcular el número total de valores faltantes en el DataFrame
+num_valores_faltantes = num_valores_totales - num_valores_no_nulos
+
+# Calcular el porcentaje de valores faltantes
+porcentaje_valores_faltantes = (num_valores_faltantes / num_valores_totales) * 100
+
+
+print("Porcentaje de valores faltantes en el DataFrame:", porcentaje_valores_faltantes * 100,"%")
 
 '''
 #elimino filas con valores faltantes
