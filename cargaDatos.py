@@ -45,6 +45,8 @@ porcentaje_valores_faltantes = (num_valores_faltantes / num_valores_totales) * 1
 
 print("Porcentaje de valores faltantes en el DataFrame:", porcentaje_valores_faltantes * 100,"%")
 
+print("Esto es un cambio")
+
 '''
 #elimino filas con valores faltantes
 df_cleanded.dropna(inplace=True)
