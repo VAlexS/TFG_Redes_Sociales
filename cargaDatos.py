@@ -47,6 +47,8 @@ print("Porcentaje de valores faltantes en el DataFrame:", porcentaje_valores_fal
 
 print("Esto es un cambio")
 
+print("Segundo cambio")
+
 '''
 #elimino filas con valores faltantes
 df_cleanded.dropna(inplace=True)
