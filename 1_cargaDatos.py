@@ -18,6 +18,8 @@ print("COLUMNAS (tras la seleccion de variables relevantes)")
 
 df_cleanded = df[['Weekday', 'Hour', 'IsReshare', 'Reach', 'RetweetCount', 'Likes', 'Klout', 'Sentiment', 'text']]
 
+
+
 print(df_cleanded.columns)
 
 print(df_cleanded.head(n=20))
@@ -47,13 +49,9 @@ porcentaje_valores_faltantes = (num_valores_faltantes / num_valores_totales) * 1
 
 print("Porcentaje de valores faltantes en el DataFrame:", porcentaje_valores_faltantes * 100,"%")
 
-<<<<<<< HEAD:1_cargaDatos.py
-=======
-print("Esto es un cambio")
 
-print("Segundo cambio")
 
-'''
+
 #elimino filas con valores faltantes
 df_cleanded.dropna(inplace=True)
 
@@ -67,10 +65,5 @@ print("PARTE DEL FICHERO")
 print(df_cleanded.head(n=10))
 
 #ya que tenemos el dataframe sin valores faltantes, genero un nuevo .csv con ese dataframe
-
-df_cleanded.to_csv('files\TwitterDatashetClean.csv', index=False)
-'''
-
->>>>>>> 14eb82036861e97b111c9a5f07eb8e29fff3fe0c:cargaDatos.py
 
 df_cleanded.to_csv('files\TwitterDatashetClean.csv', index=False)
