@@ -20,6 +20,8 @@ def print_descripcion(df):
 
 df = pd.read_csv('files\TwitterDatashetClean.csv', low_memory=False)
 
+
+
 # la columna weekend toma 2 valores posibles: No si es entre semana y Yes si es fin de semana
 df['Weekend'] = df['Weekday'].apply(determinar_dia)
 
@@ -35,6 +37,7 @@ df['FranjaHoraria'] = pd.cut(df['Hour'], bins=franjas_horarias, labels=momentos_
 
 imprimir_dataframe(df)
 
+'''
 print("Normalización reach")
 print("_________________________")
 
@@ -42,12 +45,12 @@ print("_________________________")
 
 df['Reach_Normalizado'] = df['Reach'] / max(df['Reach'])
 
+
 print("____________")
 
 print(df[['Reach_Normalizado']])
 
 print(max(df['Reach_Normalizado']))
+'''
 
-
-
-# df.to_csv('files\TwitterDatashetCleanB.csv', index=False)
+df.to_csv('files\TwitterDatashetCleanB.csv', index=False)

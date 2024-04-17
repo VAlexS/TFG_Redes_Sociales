@@ -2,7 +2,9 @@ import numpy as np
 import pandas as pd
 
 
-df = pd.read_csv('files\TweetsEngagementMetrics.csv', low_memory=False)
+df = pd.read_csv('files\TweetsEngagementMetrics.csv')
+
+print(df.count())
 
 #extraccion de los datos
 
@@ -16,7 +18,9 @@ print("_____________________________")
 print("COLUMNAS (tras la seleccion de variables relevantes)")
 #me quedo con las variables que considero relevantes
 
-df_cleanded = df[['Weekday', 'Hour', 'IsReshare', 'Reach', 'RetweetCount', 'Likes', 'Klout', 'Sentiment', 'text']]
+df_cleanded = df[['Weekday', 'Hour', 'IsReshare', 'Reach', 'RetweetCount', 'Likes', 'Klout', 'text']]
+
+
 
 
 
