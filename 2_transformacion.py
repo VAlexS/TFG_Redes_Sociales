@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 
 
@@ -9,13 +8,7 @@ def determinar_dia(weekday):
         return 'Yes'
 
 
-def imprimir_dataframe(df):
-    print(df.columns)
-    print(df.head(n=20))
 
-
-def print_descripcion(df):
-    print(df.describe())
 
 
 df = pd.read_csv('files\TwitterDatashetClean.csv', low_memory=False)
@@ -35,22 +28,21 @@ momentos_dia = ['Noche', 'Madrugada', 'Mañana', 'Tarde', 'Noche']
 
 df['FranjaHoraria'] = pd.cut(df['Hour'], bins=franjas_horarias, labels=momentos_dia, right=False, ordered=False)
 
-imprimir_dataframe(df)
+print(df)
 
-'''
-print("Normalización reach")
-print("_________________________")
+print("___________________-")
 
-# normalizo el reach
-
-df['Reach_Normalizado'] = df['Reach'] / max(df['Reach'])
-
-
+print("Describe")
 print("____________")
 
-print(df[['Reach_Normalizado']])
+print(df.describe())
 
-print(max(df['Reach_Normalizado']))
-'''
+print("_________________")
 
-df.to_csv('files\TwitterDatashetCleanB.csv', index=False)
+print("Info")
+print("___________")
+print(df.info())
+
+
+
+#df.to_csv('files\TwitterDatashetCleanB.csv', index=False)
