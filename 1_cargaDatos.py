@@ -15,7 +15,7 @@ print("_____________________________")
 print("COLUMNAS (tras la seleccion de variables relevantes)")
 #me quedo con las variables que considero relevantes
 
-df_cleanded = df[['Weekday', 'Hour', 'IsReshare', 'Reach', 'RetweetCount', 'Likes', 'Klout', 'text']]
+df_cleanded = df[['Weekday', 'Hour', 'Reach', 'RetweetCount', 'Likes', 'Klout', 'text']]
 
 
 print(df_cleanded.columns)
@@ -41,4 +41,4 @@ print(df_cleanded.head(n=10))
 
 #ya que tenemos el dataframe sin valores faltantes, genero un nuevo .csv con ese dataframe
 
-#df_cleanded.to_csv('files\TwitterDatashetClean.csv', index=False)
+df_cleanded.to_csv('files\TwitterDatashetClean.csv', index=False)
