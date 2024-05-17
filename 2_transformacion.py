@@ -11,7 +11,7 @@ def determinar_dia(weekday):
 
 
 
-df = pd.read_csv('files\TwitterDatashetClean.csv', low_memory=False)
+df = pd.read_csv('files\TwitterDatashetClean.csv')
 
 
 
