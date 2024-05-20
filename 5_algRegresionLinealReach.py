@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
-df = pd.read_csv('files\TwitterDatashetCleanB.csv')
+df = pd.read_csv('files/TwitterDatashetCleanB.csv')
 
 dias_a_numeros = {'Monday': 1, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 4, 'Friday': 5, 'Saturday': 6, 'Sunday': 7}
 
@@ -21,6 +21,7 @@ X = df[['Weekday', 'Hour', 'RetweetCount', 'Likes', 'Weekend', 'FranjaHoraria']]
 
 y = df[['Reach']]
 
+
 df.to_csv('files\TwitterDatashetTransformado.csv', index=False)
 
 # Divido el conjunto de datos en conjuntos de entrenamiento y prueba, 80% para entrenamiento y 20% para prueba
@@ -34,8 +35,10 @@ y_pred = model.predict(X_test)
 
 
 mse = mean_squared_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
+
 
 print("Mean Squared Error:", mse)
-print("R-squared:", r2)
+
+
+
 
