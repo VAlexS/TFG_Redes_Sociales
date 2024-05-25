@@ -8,12 +8,7 @@ def determinar_dia(weekday):
         return 'Yes'
 
 
-
-
-
 df = pd.read_csv('files\TwitterDatashetClean.csv')
-
-
 
 # la columna weekend toma 2 valores posibles: No si es entre semana y Yes si es fin de semana
 df['Weekend'] = df['Weekday'].apply(determinar_dia)
@@ -42,7 +37,5 @@ print("_________________")
 print("Info")
 print("___________")
 print(df.info())
-
-
 
 df.to_csv('files\TwitterDatashetCleanB.csv', index=False)
