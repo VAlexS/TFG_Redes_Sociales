@@ -1,11 +1,11 @@
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.model_selection import train_test_split
-from xgboost import XGBRegressor
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.tree import DecisionTreeRegressor
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.tree import DecisionTreeRegressor
+from xgboost import XGBRegressor
 
 df = pd.read_csv('files\TwitterDatashetTransformado.csv')
 
