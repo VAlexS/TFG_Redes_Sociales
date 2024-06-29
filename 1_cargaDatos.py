@@ -16,7 +16,6 @@ print("COLUMNAS (tras la seleccion de variables relevantes)")
 
 df_cleanded = df[['Weekday', 'Hour', 'Reach', 'RetweetCount', 'Likes', 'Klout', 'text']]
 
-
 print(df_cleanded.columns)
 
 print("Descripción")
